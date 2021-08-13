@@ -4,6 +4,10 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
     entry: './src/client/index.js',
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        port: 8081,
+    },
     output: {
         libraryTarget: 'var',
         library: 'Client'
